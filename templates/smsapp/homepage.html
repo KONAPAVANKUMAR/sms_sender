@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <form id="form" method="post" action="{% url 'sendSms' %}" class="container bg-primary py-3 mt-3 p-xl-5 mt-xl-5">
+        {% csrf_token %}
+        <input placeholder="Enter Mobile Number" name="phoneNo" type="text" class="form-control rounded">
+        <br>
+        <textarea placeholder="Enter Your Message" name="message" class="form-control rounded" rows="10"></textarea>
+        <div class="d-flex justify-content-center mt-3">
+            <input type="submit" value="Send" class="btn btn-success rounded">
+        </div>
+        
+    </form>
+{% endblock %}

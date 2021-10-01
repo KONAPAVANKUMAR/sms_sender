@@ -1,0 +1,13 @@
+.rounded {
+    border-radius: 15px;
+}
+
+#form{
+    width: 40vw;
+}
+
+@media (max-width: 992px) {
+    #form{
+        width: 90vw;
+    }
+}
